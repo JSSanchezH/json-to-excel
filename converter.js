@@ -1,4 +1,4 @@
-const XLSX = require('xlsx');
+const XLSX = require('xlsx'); //npm i xlsx
 
 let datos = [];
 let ws = [];
