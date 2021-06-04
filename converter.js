@@ -2,6 +2,7 @@ const XLSX = require('xlsx'); //npm i xlsx
 
 let datos = [];
 let ws = [];
+let nameWS = [];
 let i = 0;
 
 /*----------JSON datos a exportar, cada dato corresponde a una hoja----------*/
@@ -29,7 +30,7 @@ var wb = XLSX.utils.book_new();
 
 for(const dato of datos){
 ws[i] = XLSX.utils.json_to_sheet(dato);
-XLSX.utils.book_append_sheet(wb, ws[i], nombreWS[i]);
+XLSX.utils.book_append_sheet(wb, ws[i], nameWS[i]);
 i++;
 }
 
